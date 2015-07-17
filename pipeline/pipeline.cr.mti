@@ -1,0 +1,36 @@
+D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module Peripheral
+
+Top level modules:
+	Peripheral
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/DataMem.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module DataMem
+
+Top level modules:
+	DataMem
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module digitube_scan
+
+Top level modules:
+	digitube_scan
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/regfile.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/regfile.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module RegFile
+
+Top level modules:
+	RegFile
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module ROM
+
+Top level modules:
+	ROM
+
+} {} {}}
