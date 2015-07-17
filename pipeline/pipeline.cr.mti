@@ -1,4 +1,11 @@
-D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module programcounter
+
+Top level modules:
+	programcounter
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module Peripheral
 

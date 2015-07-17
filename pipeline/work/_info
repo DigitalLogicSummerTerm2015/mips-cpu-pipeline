@@ -34,6 +34,22 @@ R2
 R3
 !s100 cSA]O]<h1@NDKHRm7c;OK0
 !s85 0
+vIFIDreg
+!s100 `?Ai_PkQb68=Jc8<iI7;L2
+IcICLT:;Fkc_I0G8?h[R^Y2
+VzWBkB9z_lbEMKjMGEZ37a1
+R4
+w1437135661
+8D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
+FD:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
+L0 3
+R1
+r1
+!s85 0
+31
+R2
+R3
+n@i@f@i@dreg
 vPeripheral
 IzKo?1oTlhhbiX<O?S8=7f2
 V]3^CWJKc4;Nj;SZBg742@1
@@ -51,20 +67,20 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vprogramcounter
-!s100 KojM826G[DoHg?Tc52T171
-Iabz1<Vle6QIdTbmzUZS8F1
-V]OjnT4HGW=bBa7>@N0ozE0
+IB9GZ_J_R@AW2aOThW41F<2
+VKMQCj2=eLJndl`3E6oKoz1
 R4
-w1437132646
+w1437134492
 8D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 FD:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 L0 3
 R1
 r1
-!s85 0
 31
 R2
 R3
+!s100 U7^OndE=:llYlQ_9C6CTQ1
+!s85 0
 vRegFile
 IR@FKmia9IYGD:Yazk1n@B3
 VU@f@iZ1cJUm=2UP;DjoI41

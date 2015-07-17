@@ -4,6 +4,7 @@ entity programcounter is
     port(
         clk             : in     vl_logic;
         reset           : in     vl_logic;
+        datahazard      : in     vl_logic;
         PCSrc           : in     vl_logic_vector(2 downto 0);
         ALUOut          : in     vl_logic;
         ConBA           : in     vl_logic_vector(31 downto 0);
