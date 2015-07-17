@@ -1,0 +1,84 @@
+m255
+K3
+13
+cModel Technology
+dD:\modeltech_6.5f\examples
+vDataMem
+I:2McfRa?;N[JQl6OEcK4D2
+V3NXn2IXJM`I26fSc6@b]33
+Z0 dD:\Document\mips-cpu-pipeline\pipeline
+w1372056005
+8D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
+FD:/Document/mips-cpu-pipeline/pipeline/DataMem.v
+L0 3
+Z1 OE;L;6.5f;42
+r1
+31
+Z2 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+n@data@mem
+Z3 !s102 -nocovercells
+!s100 37;4YcS9eiHG2E`0B97WQ1
+!s85 0
+vdigitube_scan
+IG4@W:?G]UE?mh5iQ]ERoB2
+V?86S1@OaYaC6@]K8QDYb@0
+Z4 dD:\Document\mips-cpu-pipeline\pipeline
+w1403761575
+8D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
+FD:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
+L0 5
+R1
+r1
+31
+R3
+R2
+!s100 cSA]O]<h1@NDKHRm7c;OK0
+!s85 0
+vPeripheral
+IzKo?1oTlhhbiX<O?S8=7f2
+V]3^CWJKc4;Nj;SZBg742@1
+R4
+w1340879364
+8D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+FD:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+L0 3
+R1
+r1
+31
+R3
+R2
+n@peripheral
+!s100 LzJMT_6X6nlD==?VD8beN1
+!s85 0
+vRegFile
+IR@FKmia9IYGD:Yazk1n@B3
+VU@f@iZ1cJUm=2UP;DjoI41
+R4
+w1339662085
+8D:/Document/mips-cpu-pipeline/pipeline/regfile.v
+FD:/Document/mips-cpu-pipeline/pipeline/regfile.v
+L0 3
+R1
+r1
+31
+R3
+R2
+n@reg@file
+!s100 6IXFomMl?:CEb1^gCKmfc2
+!s85 0
+vROM
+!s100 W8>lQI<e6ARiz@GHkTK6^3
+ImQF@Vg_55;KT21Weo0iZz2
+VfD3LVFSESNQQBVkbKMLn31
+R4
+w1372056198
+8D:/Document/mips-cpu-pipeline/pipeline/rom.v
+FD:/Document/mips-cpu-pipeline/pipeline/rom.v
+L0 3
+R1
+r1
+!s85 0
+31
+R3
+R2
+n@r@o@m
