@@ -3,25 +3,40 @@ K3
 13
 cModel Technology
 dD:\modeltech_6.5f\examples
-vcontrolunit
-I5LkidiLC8?>gk]jZBQ9G[3
-VD9DSdQjYF7g1^C;^<KX2K0
+vbranchcheck
+IO8mdi;=nKgNWRiOEYg8Z02
+V=2YLTj;:9SI=Cl72Fk56N2
 Z0 dD:\Document\mips-cpu-pipeline\pipeline
-w1437291778
-8D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
-FD:/Document/mips-cpu-pipeline/pipeline/controlunit.v
+w1437294166
+8D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+FD:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
 L0 3
 Z1 OE;L;6.5f;42
 r1
 31
 Z2 !s102 -nocovercells
 Z3 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 i>>zjTTjSzLR@2BbC?Qf>1
+!s85 0
+vcontrolunit
+I5LkidiLC8?>gk]jZBQ9G[3
+VD9DSdQjYF7g1^C;^<KX2K0
+Z4 dD:\Document\mips-cpu-pipeline\pipeline
+w1437291778
+8D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
+FD:/Document/mips-cpu-pipeline/pipeline/controlunit.v
+L0 3
+R1
+r1
+31
+R2
+R3
 !s100 N>L;5Q>>]dDnRF2Z@KLI[2
 !s85 0
 vDataMem
 Iee10Kci>0]bUY1YOl@aGf1
 V3NXn2IXJM`I26fSc6@b]33
-Z4 dD:\Document\mips-cpu-pipeline\pipeline
+R4
 w1437289548
 8D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 FD:/Document/mips-cpu-pipeline/pipeline/DataMem.v
@@ -82,11 +97,11 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-!s100 je]Lc6z6`m47`SGI`2TS72
-I9^o2kT;JoRz2oo1fGZMg;0
+!s100 7`BMZn:cV7eGGW7??E[VU2
+I`;[X?5`7[B?Ef^JMHbS8E0
 Vh;YQ`TZIJ6kh71g5F>Hnh1
 R4
-w1437292386
+w1437294267
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3
