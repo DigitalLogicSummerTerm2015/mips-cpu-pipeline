@@ -190,6 +190,22 @@ R3
 n@i@f@i@dreg
 !s100 6GI5kF?azZ4jf]4JI5nO62
 !s85 0
+vMEMWBreg
+Iz:NeIE@PFi^MX[`WXFWhz1
+V4LziSTnFPb[V?hOPJ]Vo73
+R4
+w1437316666
+8D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
+FD:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
+L0 3
+R1
+r1
+31
+R2
+R3
+n@m@e@m@w@breg
+!s100 ]o?P6@CDg]N=8>c9f4?1Y2
+!s85 0
 vPeripheral
 IzKo?1oTlhhbiX<O?S8=7f2
 V]3^CWJKc4;Nj;SZBg742@1
@@ -207,11 +223,11 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-!s100 CiEmV]BnSA5MZ:>>kE4@Q0
-Il5J9=]F?MIB5Ago6Z4df51
-Vh;YQ`TZIJ6kh71g5F>Hnh1
+!s100 IhCF1Y6EZa5Nm]UFFH3oh2
+I01=bWmEm@eM^AS7O9k9mC2
+Vi=[K:=Un2hW2=0d=31gRM3
 R4
-w1437314668
+w1437317192
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3

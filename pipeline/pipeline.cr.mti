@@ -19,6 +19,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	Peripheral
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module MEMWBreg
+
+Top level modules:
+	MEMWBreg
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module forwardMUX
@@ -89,19 +96,19 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	forwardunit
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module ROM
-
-Top level modules:
-	ROM
-
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/regfile.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/regfile.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module RegFile
 
 Top level modules:
 	RegFile
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module ROM
+
+Top level modules:
+	ROM
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010

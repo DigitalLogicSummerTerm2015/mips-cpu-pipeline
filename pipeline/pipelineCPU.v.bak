@@ -1,9 +1,12 @@
 `timescale 1ns/1ps
 
-module pipelineCPU(clk,reset);
+module pipelineCPU(clk,reset,switch,led,digi);
 
 input clk;
 input reset;
+input switch;
+output led;
+output digi;//input and output need modifying
 
 wire datahazard;
 wire [2:0] PCSrc;
@@ -75,13 +78,15 @@ wire MEMWBRegWr;
 wire [1:0] forwardA;
 wire [1:0] forwardB;
 wire [31:0] EXMEMALUresult;
+wire [31:0] MEMWBALUresult;
 wire [31:0] DataA;
 wire [31:0] DataB;
 wire [31:0] DataAin;
 wire [31:0] DataBin;
 wire [31:0] ALUresult;
-wire [31:0] EXMEMALUresult;
 wire [31:0] EXMEMDatawrite;
+wire [31:0] RAMrdata;
+wire [31:0] RAMrdataout;
 
 programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplusin);
 
@@ -118,5 +123,12 @@ ALU ALU1(DataAin,DataBin,IDEXALUFun,IDEXSign,ALUresult);//refer to the book
 
 EXMEMreg EXMEMreg1(clk,IDEXinstruction,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
 EXMEMinstruction,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr,EXMEMMemWr,EXMEMMemRd,EXMEMMemtoReg);
+
+DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata);
+
+Peripheral Per1(reset,clk,EXMEMMemRd,RXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);//need modifying
+
+MEMWBreg MEMWBreg1(clk,EXMEMinstruction,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
+MEMWBinstruction,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);
 
 endmodule
