@@ -14,7 +14,7 @@ begin
     6'h00: branch <= 0;
     6'h01://bgez
     begin
-      if(DatabusA < 32'h0) branch <= 0;
+      if(DatabusA[31] == 1'b1) branch <= 0;
       else branch <= 1;
     end
     6'h04://beq
@@ -29,13 +29,13 @@ begin
     end
     6'h06://blez
     begin
-      if(DatabusA > 32'h0) branch <= 0;
-      else branch <= 1;
+      if(DatabusA[31] == 1'b1 || DatabusA == 32'h0) branch <= 1;
+      else branch <= 0;
     end
     6'h07://bgtz
     begin
-      if(DatabusA > 32'h0) branch <= 1;
-      else branch <= 0;
+      if(DatabusA[31] == 1'b1 || DatabusA == 32'h0) branch <= 0;
+      else branch <= 1;
     end
     default: branch <= 0;
   endcase
