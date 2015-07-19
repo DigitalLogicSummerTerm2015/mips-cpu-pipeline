@@ -25,7 +25,7 @@ begin
     begin
       case(PCSrc[2:0])
         3'b000: currentPC <= PCplusin;
-        3'b001: currentPC <= (ALUOut == 1'b0) ? PCplusin : ConBA;
+        3'b001: currentPC <= (ALUOut == 1'b0) ? PCplusin : {currentPC[31],ConBA[30:0]};
         3'b010: currentPC <= {currentPC[31],5'h00,JT};
         3'b011: currentPC <= DatabusA;
         3'b100: currentPC <= 32'h80000004;

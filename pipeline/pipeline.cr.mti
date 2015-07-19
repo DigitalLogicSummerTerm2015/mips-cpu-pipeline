@@ -1,9 +1,9 @@
-D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module branchcheck
+-- Compiling module flushMUX
 
 Top level modules:
-	branchcheck
+	flushMUX
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -12,12 +12,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	Peripheral
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module programcounter
+-- Compiling module hazardcheck
 
 Top level modules:
-	programcounter
+	hazardcheck
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/controlunit.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -40,12 +40,26 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	DataMem
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/signextend.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/signextend.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module signextend
+
+Top level modules:
+	signextend
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module IFIDreg
 
 Top level modules:
 	IFIDreg
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module branchcheck
+
+Top level modules:
+	branchcheck
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -60,5 +74,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 
 Top level modules:
 	RegFile
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module programcounter
+
+Top level modules:
+	programcounter
 
 } {} {}}
