@@ -4,7 +4,8 @@ entity controlunit is
     port(
         instruction     : in     vl_logic_vector(31 downto 0);
         IRQ             : in     vl_logic_vector(31 downto 0);
-        PCplus          : in     vl_logic_vector(31 downto 0);
+        PCplusin        : in     vl_logic_vector(31 downto 0);
+        PCplusout       : out    vl_logic_vector(31 downto 0);
         PCSrc           : out    vl_logic_vector(2 downto 0);
         RegDst          : out    vl_logic_vector(1 downto 0);
         RegWr           : out    vl_logic;

@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 
-module controlunit(instruction,IRQ,PCplus,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
+module controlunit(instruction,IRQ,PCplusin,PCplusout,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
 input [31:0] instruction;
 input [31:0] IRQ;
-input [31:0] PCplus;
+input [31:0] PCplusin;
+output [31:0] PCplusout;
 output [2:0] PCSrc;
 reg [2:0] PCSrc;
 output [1:0] RegDst;
@@ -33,6 +34,8 @@ output [25:0] JT;
 reg [25:0] JT = 26'h0;
 output [5:0] OpCode;
 reg [5:0] OpCode = 6'h00;
+
+assign PCplusout = PCplusin;
 
 always @(*)
 begin

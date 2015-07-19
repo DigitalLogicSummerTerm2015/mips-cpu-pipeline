@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 
-module controlunit(instruction,IRQ,PCplus,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
+module controlunit(instruction,IRQ,PCplusin,PCplusout,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
 input [31:0] instruction;
 input [31:0] IRQ;
-input [31:0] PCplus;
+input [31:0] PCplusin;
+output [31:0] PCplusout;
 output [2:0] PCSrc;
 reg [2:0] PCSrc;
 output [1:0] RegDst;
@@ -261,7 +262,7 @@ begin
           begin
             if(instruction[10:6]==5'h00)
             begin
-              ALUFun <= 6'18;
+              ALUFun <= 6'h18;
               PCSrc <= 3'b000;
               RegDst <= 2'b00;
               RegWr <= 1;

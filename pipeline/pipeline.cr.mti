@@ -1,23 +1,16 @@
-D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module programcounter
-
-Top level modules:
-	programcounter
-
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module Peripheral
 
 Top level modules:
 	Peripheral
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/DataMem.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module DataMem
+-- Compiling module programcounter
 
 Top level modules:
-	DataMem
+	programcounter
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -26,12 +19,19 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	digitube_scan
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/regfile.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/regfile.v
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/DataMem.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module RegFile
+-- Compiling module DataMem
 
 Top level modules:
-	RegFile
+	DataMem
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module IFIDreg
+
+Top level modules:
+	IFIDreg
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -40,11 +40,11 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	ROM
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/regfile.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/regfile.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module IFIDreg
+-- Compiling module RegFile
 
 Top level modules:
-	IFIDreg
+	RegFile
 
 } {} {}}
