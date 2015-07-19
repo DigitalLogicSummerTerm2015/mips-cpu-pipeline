@@ -3,25 +3,41 @@ K3
 13
 cModel Technology
 dD:\modeltech_6.5f\examples
-vbranchcheck
-IO8mdi;=nKgNWRiOEYg8Z02
-V=2YLTj;:9SI=Cl72Fk56N2
+vALUSrcMUX
+IQdUaGhOoIjHH=mk;ZV6912
+VDA[38c?Z9Mg4=[zVnoFnO2
 Z0 dD:\Document\mips-cpu-pipeline\pipeline
-w1437294166
-8D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
-FD:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+w1437310525
+8D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v
+FD:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v
 L0 3
 Z1 OE;L;6.5f;42
 r1
 31
 Z2 !s102 -nocovercells
 Z3 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+n@a@l@u@src@m@u@x
+!s100 73aSaBX<dhj`6hdzHMmO@0
+!s85 0
+vbranchcheck
+IO8mdi;=nKgNWRiOEYg8Z02
+V=2YLTj;:9SI=Cl72Fk56N2
+Z4 dD:\Document\mips-cpu-pipeline\pipeline
+w1437294166
+8D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+FD:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
+L0 3
+R1
+r1
+31
+R2
+R3
 !s100 i>>zjTTjSzLR@2BbC?Qf>1
 !s85 0
 vcontrolunit
 I5LkidiLC8?>gk]jZBQ9G[3
 VD9DSdQjYF7g1^C;^<KX2K0
-Z4 dD:\Document\mips-cpu-pipeline\pipeline
+R4
 w1437291778
 8D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
 FD:/Document/mips-cpu-pipeline/pipeline/controlunit.v
@@ -79,6 +95,37 @@ R2
 R3
 nflush@m@u@x
 !s100 WQ9mS0iZo;8@8zG=NmM^61
+!s85 0
+vforwardMUX
+IR]?]P?ddK;HHER74U?R:g3
+VHc]bWHGCEoGgXKa:k;B:m3
+R4
+w1437309818
+8D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v
+FD:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v
+L0 3
+R1
+r1
+31
+R2
+R3
+nforward@m@u@x
+!s100 PUD:ad`ET?JhUaWLNS<7l2
+!s85 0
+vforwardunit
+I=0[2cVh:_;ob_eI?<TY=J1
+V@?cK8K_[HM?LTSMHV>KAV2
+R4
+w1437308649
+8D:/Document/mips-cpu-pipeline/pipeline/forwardunit.v
+FD:/Document/mips-cpu-pipeline/pipeline/forwardunit.v
+L0 3
+R1
+r1
+31
+R2
+R3
+!s100 BlM]97Z9lNV^>9L]7bVi^2
 !s85 0
 vhazardcheck
 IRB?SBklW>PgAoQ6^eTmWU1
@@ -144,11 +191,11 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-!s100 VLJZzZ73>GAFgiD0Be3Qm0
-IWYfb0980TbISlVQGi8:G_3
+!s100 `CRjl^f?acSDWUjilUXOJ2
+IzQN^WhHdWRHOK?O>9En>F1
 Vh;YQ`TZIJ6kh71g5F>Hnh1
 R4
-w1437305679
+w1437311101
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3

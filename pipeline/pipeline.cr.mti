@@ -1,4 +1,11 @@
-D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v
+D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module ALUSrcMUX
+
+Top level modules:
+	ALUSrcMUX
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/flushMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module flushMUX
 
@@ -11,6 +18,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 
 Top level modules:
 	Peripheral
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module forwardMUX
+
+Top level modules:
+	forwardMUX
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -67,6 +81,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 
 Top level modules:
 	branchcheck
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/forwardunit.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/forwardunit.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module forwardunit
+
+Top level modules:
+	forwardunit
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010

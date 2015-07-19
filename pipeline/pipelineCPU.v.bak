@@ -18,7 +18,6 @@ wire [31:0] PCplusout;
 wire [31:0] PCplusout1;
 wire [31:0] instructionin;
 wire [31:0] instructionout;
-wire [31:0] instructionout1;
 wire IRQ;
 wire [1:0] RegDst;
 wire RegWr;
@@ -61,6 +60,18 @@ wire [31:0] DatabusAout;
 wire [31:0] DatabusBout;
 wire [31:0] imm;
 wire [31:0] IDEXPCplus;
+wire [31:0] EXMEMinstruction;
+wire [31:0] MEMWBinstruction;
+wire EXMEMRegWr;
+wire MEMWBRegWr;
+wire [1:0] forwardA;
+wire [1:0] forwardB;
+wire [31:0] EXMEMALUresult;
+wire [31:0] DataA;
+wire [31:0] DataB;
+wire [31:0] DataAin;
+wire [31:0] DataBin;
+wire [31:0] ALUresult;
 
 programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplusin);
 
@@ -76,11 +87,23 @@ branchcheck bc1(OpCode,DatabusA,DatabusB,ALUOut);
 
 signextend signextend1(instructionout[15:0],PCplusout,EXTOp,LUOp,ConBA,immout);
 
-hazardcheck hc1(instructionout[25:21],instructionout[20:16],instructionout1[20:16],IDEXMemRd,datahazard,flushIDEX);
+hazardcheck hc1(instructionout[25:21],instructionout[20:16],IDEXinstruction[20:16],IDEXMemRd,datahazard,flushIDEX);
 
 flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn);
 
 IDEXreg IDEXreg1(clk,instructionout,DatabusA,DatabusB,immout,PCplusout,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
-IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXinstruction,DatabusAout,DatabusBout,imm,);
+IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXinstruction,DatabusAout,DatabusBout,imm,IDEXPCplus);
+
+forwardunit fu1(IDEXinstruction[25:21],IDEXinstruction[20:16],EXMEMinstruction[15:11],MEMWBinstruction[15:11],EXMEMRegWr,MEMWBRegWr,forwardA,forwardB);
+
+forwardMUX FA(forwardA,DatabusAout,WriteData,EXMEMALUresult,DataA);
+
+forwardMUX FB(forwardB,DatabusBout,WriteData,EXMEMALUresult,DataB);
+
+ALUSrcMUX ALA(IDEXALUSrc1,DataA,{27'h0,IDEXinstruction[10:6]},DataAin);
+
+ALUSrcMUX ALB(IDEXALUSrc2,DataB,imm,DataBin);
+
+ALU ALU1(DataAin,DataBin,,,ALUresult);//refer to the book
 
 endmodule
