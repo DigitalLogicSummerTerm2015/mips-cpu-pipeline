@@ -19,6 +19,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	Peripheral
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module pipelineCPU
+
+Top level modules:
+	pipelineCPU
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module MEMWBreg
