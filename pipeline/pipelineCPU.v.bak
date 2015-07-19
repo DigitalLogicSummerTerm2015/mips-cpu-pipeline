@@ -24,7 +24,6 @@ wire [31:0] instructionout;
 wire IRQ;
 wire [1:0] RegDst;
 wire RegWr;
-wire RegWrMEMWB;
 wire ALUSrc1;
 wire ALUSrc2;
 wire [5:0] ALUFun;
@@ -96,7 +95,7 @@ IFIDreg IFIDreg1(clk,datahazard,instructionin,PCplusin,instructionout,PCplusout)
 
 controlunit ctrl1(instructionout,IRQ,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
-RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,RegWrMEMWB,WriteReg,WriteData);
+RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
 
 branchcheck bc1(OpCode,DatabusA,DatabusB,ALUOut);
 
@@ -128,7 +127,11 @@ DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrd
 
 Peripheral Per1(reset,clk,EXMEMMemRd,RXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);//need modifying
 
-MEMWBreg MEMWBreg1(clk,EXMEMinstruction,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
-MEMWBinstruction,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);
+MEMWBreg MEMWBreg1(clk,EXMEMinstruction,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
+MEMWBinstruction,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);
+
+MemtoRegMUX MtR(MEMWBMemtoReg,MEMWBALUresult,RAMrdataout,MEMWBPCplus,WriteData);
+
+RegDstMUX RD(MEMWBRegDst,MEMWBinstruction[15:11],MEMWBinstruction[20:16]);
 
 endmodule

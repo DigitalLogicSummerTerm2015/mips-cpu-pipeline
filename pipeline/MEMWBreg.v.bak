@@ -29,7 +29,8 @@ begin
   rdataout <= rdatain;
   ALUresultout <= ALUresultin;
   RegDstout <= RegDstin;
-  
+  RegWrout <= RegWrin;
+  MemtoRegout <= MemtoRegin;
 end
 
 endmodule

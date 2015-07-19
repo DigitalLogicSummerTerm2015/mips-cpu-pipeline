@@ -75,12 +75,26 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	signextend
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/MemtoRegMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MemtoRegMUX.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module MemtoRegMUX
+
+Top level modules:
+	MemtoRegMUX
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module IFIDreg
 
 Top level modules:
 	IFIDreg
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/RegDstMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/RegDstMUX.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module RegDstMUX
+
+Top level modules:
+	RegDstMUX
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Branchcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
