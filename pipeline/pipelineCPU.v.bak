@@ -47,6 +47,20 @@ wire Signn;
 wire MemWrn;
 wire MemRdn;
 wire [1:0] MemtoRegn;
+wire [1:0] IDEXRegDst;
+wire IDEXRegWr;
+wire IDEXALUSrc1;
+wire IDEXALUSrc2;
+wire [5:0] IDEXALUFun;
+wire IDEXSign;
+wire IDEXMemWr;
+wire IDEXMemRd;
+wire [1:0] IDEXMemtoReg;
+wire [31:0] IDEXinstruction;
+wire [31:0] DatabusAout;
+wire [31:0] DatabusBout;
+wire [31:0] imm;
+wire [31:0] IDEXPCplus;
 
 programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplusin);
 
@@ -64,6 +78,9 @@ signextend signextend1(instructionout[15:0],PCplusout,EXTOp,LUOp,ConBA,immout);
 
 hazardcheck hc1(instructionout[25:21],instructionout[20:16],instructionout1[20:16],IDEXMemRd,datahazard,flushIDEX);
 
-flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn);
+flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn);
+
+IDEXreg IDEXreg1(clk,instructionout,DatabusA,DatabusB,immout,PCplusout,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
+IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXinstruction,DatabusAout,DatabusBout,imm,);
 
 endmodule

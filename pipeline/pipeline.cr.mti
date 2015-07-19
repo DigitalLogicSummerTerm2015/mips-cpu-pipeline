@@ -12,6 +12,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	Peripheral
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module IDEXreg
+
+Top level modules:
+	IDEXreg
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module hazardcheck
