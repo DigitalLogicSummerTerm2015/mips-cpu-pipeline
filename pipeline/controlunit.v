@@ -35,7 +35,7 @@ reg [25:0] JT = 26'h0;
 output [5:0] OpCode;
 reg [5:0] OpCode = 6'h00;
 
-assign PCplusout = PCplusin;
+assign PCplusout = (IRQ == 1'b0) ? PCplusin : PCplusin - 32'h00000004;
 
 always @(*)
 begin

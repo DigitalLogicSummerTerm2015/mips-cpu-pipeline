@@ -105,7 +105,7 @@ hazardcheck hc1(instructionout[25:21],instructionout[20:16],IDEXinstruction[20:1
 
 flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn);
 
-IDEXreg IDEXreg1(clk,instructionout,DatabusA,DatabusB,immout,PCplusout,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
+IDEXreg IDEXreg1(clk,instructionout,DatabusA,DatabusB,immout,PCplusout1,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
 IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXinstruction,DatabusAout,DatabusBout,imm,IDEXPCplus);
 
 forwardunit fu1(IDEXinstruction[25:21],IDEXinstruction[20:16],EXMEMinstruction[15:11],MEMWBinstruction[15:11],EXMEMRegWr,MEMWBRegWr,forwardA,forwardB);
@@ -132,6 +132,7 @@ MEMWBinstruction,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,M
 
 MemtoRegMUX MtR(MEMWBMemtoReg,MEMWBALUresult,RAMrdataout,MEMWBPCplus,WriteData);
 
-RegDstMUX RD(MEMWBRegDst,MEMWBinstruction[15:11],MEMWBinstruction[20:16],WriteReg);
+
+RegDstMUX RD(MEMWBRegDst,MEMWBinstruction[15:11],MEMWBinstruction[20:16],WriteReg);
 
 endmodule
