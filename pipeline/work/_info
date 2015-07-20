@@ -255,7 +255,6 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-!s100 1<Oc0EPGlEF96ZB^G_1PT0
 I[LGY_>SWa7zP5@JGkWfJ81
 Vi=[K:=Un2hW2=0d=31gRM3
 R4
@@ -265,26 +264,27 @@ FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3
 R1
 r1
-!s85 0
 31
 R2
 R3
 npipeline@c@p@u
+!s100 1<Oc0EPGlEF96ZB^G_1PT0
+!s85 0
 vprogramcounter
-IMO]U?bZB]RUj?l;3mLjBP2
+!s100 QA8=nXBoPXlTG2aWg:[KR2
+IEPB6LJ=d_IJi9;W1RkeMF0
 VKMQCj2=eLJndl`3E6oKoz1
 R4
-w1437295606
+w1437430055
 8D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 FD:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 L0 3
 R1
 r1
+!s85 0
 31
 R2
 R3
-!s100 Fjf6J7?]g6]YLYjUTMN892
-!s85 0
 vRegDstMUX
 ImlGMoZ@[ABo:XF9iJM1mJ2
 VSbAzVejcbGfZjmWN;LVg93

@@ -36,7 +36,7 @@ begin
   end
 end
 
-assign PC = currentPC;
+assign PC = {1'b0,currentPC[30:0]};
 assign PCplusout = {PC[31],PC[30:0] + 31'h00000004};
 assign PCplusin = PCplusout;
  
