@@ -15,6 +15,8 @@ wire [31:0] ConBA;
 wire [25:0] JT;
 wire [31:0] DatabusA;
 wire [31:0] DatabusB;
+wire [31:0] daout;
+wire [31:0] dbout;
 wire [31:0] PC;
 wire [31:0] PCplusin;
 wire [31:0] PCplusout;
@@ -77,6 +79,8 @@ wire EXMEMRegWr;
 wire MEMWBRegWr;
 wire [1:0] forwardA;
 wire [1:0] forwardB;
+wire [1:0] forward1;
+wire [1:0] forward2;
 wire [31:0] EXMEMALUresult;
 wire [31:0] MEMWBALUresult;
 wire [31:0] DataA;
@@ -98,18 +102,23 @@ controlunit ctrl1(instructionout,IRQout,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,
 
 RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
 
-branchcheck bc1(OpCode,DatabusA,DatabusB,ALUOut);
+branchcheck bc1(OpCode,daout,dbout,ALUOut);
 
 signextend signextend1(instructionout[15:0],PCplusout,EXTOp,LUOp,ConBA,immout);
 
-hazardcheck hc1(instructionout[25:21],instructionout[20:16],IDEXinstruction[20:16],IDEXMemRd,datahazard,flushIDEX);
+hazardcheck hc1(instructionout[25:21],instructionout[20:16],IDEXinstruction[20:16],EXMEMinstruction[20:16],IDEXMemRd,EXMEMMemRd,datahazard,flushIDEX);
 
 flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn);
 
-IDEXreg IDEXreg1(clk,instructionout,DatabusA,DatabusB,immout,PCplusout1,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
+IDEXreg IDEXreg1(clk,instructionout,daout,dbout,immout,PCplusout1,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
 IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXinstruction,DatabusAout,DatabusBout,imm,IDEXPCplus);
 
-forwardunit fu1(IDEXinstruction[25:21],IDEXinstruction[20:16],EXMEMinstruction[15:11],MEMWBinstruction[15:11],EXMEMRegWr,MEMWBRegWr,forwardA,forwardB);
+forwardunit fu1(instructionout[25:21],instructionout[20:16],IDEXinstruction[25:21],IDEXinstruction[20:16],IDEXinstruction[15:11],EXMEMinstruction[15:11],MEMWBinstruction[15:11],
+IDEXRegWr,EXMEMRegWr,MEMWBRegWr,forwardA,forwardB,forward1,forward2);
+
+databusMUX DA(forward1,DatabusA,ALUresult,EXMEMALUresult,WriteData,daout);
+
+databusMUX DB(forward2,DatabusB,ALUresult,EXMEMALUresult,WriteData,dbout);
 
 forwardMUX FA(forwardA,DatabusAout,WriteData,EXMEMALUresult,DataA);
 

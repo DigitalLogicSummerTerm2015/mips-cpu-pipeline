@@ -1,11 +1,13 @@
 `timescale 1ns/1ps
 
-module hazardcheck(IFIDRs,IFIDRt,IDEXRt,IDEXMemRd,datahazard,flushIDEX);
+module hazardcheck(IFIDRs,IFIDRt,IDEXRt,EXMEMRt,IDEXMemRd,EXMEMMemRd,datahazard,flushIDEX);
 
 input [4:0] IFIDRs;
 input [4:0] IFIDRt;
 input [4:0] IDEXRt;
+input [4:0] EXMEMRt;
 input IDEXMemRd;
+input EXMEMMemRd;
 output datahazard;
 reg datahazard;
 output flushIDEX;
@@ -24,6 +26,24 @@ begin
     begin
       datahazard <= 0;
       flushIDEX <= 0;
+    end
+  end
+  else
+  begin
+    datahazard <= 0;
+    flushIDEX <= 0;
+  end
+  if(EXMEMMemRd)
+  begin
+    if(EXMEMRt == IFIDRs || EXMEMRt == IFIDRt)
+    begin
+      datahazard <= 1;
+      flushIDEX <= 1;
+    end
+    else
+    begin
+     datahazard <= 0;
+     flushIDEX <= 0;
     end
   end
   else
