@@ -175,10 +175,10 @@ n@i@d@e@xreg
 !s100 :`[^Dc@l=I<D@?G?ZGzg@3
 !s85 0
 vIFIDreg
-I75D8Fj==CQBXQQFa^XM6U0
-VN=WABSOj>M[_JP0L<7Re52
+IjC<?O>AhT4ao^bULI:omF3
+V^L^g:6Rkbc0KAQfb3gb<`2
 R4
-w1437291548
+w1437374520
 8D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 FD:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 L0 3
@@ -188,7 +188,7 @@ r1
 R2
 R3
 n@i@f@i@dreg
-!s100 6GI5kF?azZ4jf]4JI5nO62
+!s100 T>nz5EVHRDZ9SDER9k=0F0
 !s85 0
 vMemtoRegMUX
 IkN8fQ5k@X<3X2gdOB>TeF1
@@ -239,11 +239,11 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-!s100 jiVFk>l0i3bSIJ0SCJTl60
-I9L93UMC4M<69h7aATVzCE2
+!s100 Y^68:;I;m4]=:BMj8@AV[2
+I=IiAmC7jG_^L=YiK3[eIM0
 Vi=[K:=Un2hW2=0d=31gRM3
 R4
-w1437366730
+w1437374575
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3

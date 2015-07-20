@@ -22,6 +22,7 @@ wire [31:0] PCplusout1;
 wire [31:0] instructionin;
 wire [31:0] instructionout;
 wire IRQ;
+wire IRQout;
 wire [1:0] RegDst;
 wire RegWr;
 wire ALUSrc1;
@@ -91,9 +92,9 @@ programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplus
 
 ROM rom1(PC,instructionin);
 
-IFIDreg IFIDreg1(clk,datahazard,instructionin,PCplusin,instructionout,PCplusout);
+IFIDreg IFIDreg1(clk,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
-controlunit ctrl1(instructionout,IRQ,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
+controlunit ctrl1(instructionout,IRQout,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
 RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
 
