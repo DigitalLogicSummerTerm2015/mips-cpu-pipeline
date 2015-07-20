@@ -132,7 +132,6 @@ MEMWBinstruction,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,M
 
 MemtoRegMUX MtR(MEMWBMemtoReg,MEMWBALUresult,RAMrdataout,MEMWBPCplus,WriteData);
 
-
 RegDstMUX RD(MEMWBRegDst,MEMWBinstruction[15:11],MEMWBinstruction[20:16],WriteReg);
 
 endmodule
