@@ -92,7 +92,7 @@ programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplus
 
 ROM rom1(PC,instructionin);
 
-IFIDreg IFIDreg1(clk,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
+IFIDreg IFIDreg1(clk,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
 controlunit ctrl1(instructionout,IRQout,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
@@ -124,9 +124,7 @@ ALU ALU1(DataAin,DataBin,IDEXALUFun,IDEXSign,ALUresult);//refer to the book
 EXMEMreg EXMEMreg1(clk,IDEXinstruction,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
 EXMEMinstruction,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr,EXMEMMemWr,EXMEMMemRd,EXMEMMemtoReg);
 
-DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata);
-
-Peripheral Per1(reset,clk,EXMEMMemRd,RXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);//need modifying
+DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,irqout);
 
 MEMWBreg MEMWBreg1(clk,EXMEMinstruction,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
 MEMWBinstruction,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);

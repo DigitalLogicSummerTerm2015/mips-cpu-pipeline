@@ -124,9 +124,7 @@ ALU ALU1(DataAin,DataBin,IDEXALUFun,IDEXSign,ALUresult);//refer to the book
 EXMEMreg EXMEMreg1(clk,IDEXinstruction,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
 EXMEMinstruction,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr,EXMEMMemWr,EXMEMMemRd,EXMEMMemtoReg);
 
-DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata);
-
-Peripheral Per1(reset,clk,EXMEMMemRd,RXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);//need modifying
+DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);
 
 MEMWBreg MEMWBreg1(clk,EXMEMinstruction,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
 MEMWBinstruction,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);

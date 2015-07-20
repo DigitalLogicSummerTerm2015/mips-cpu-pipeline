@@ -50,10 +50,10 @@ R3
 !s100 LWTJT4]`h@>70z<jM:Y;H1
 !s85 0
 vDataMem
-Iee10Kci>0]bUY1YOl@aGf1
-V3NXn2IXJM`I26fSc6@b]33
+IZcE[GV2Q>7<RgDAL;h9S@3
+V68TR=LLM8C`<?Oo<V5hZ03
 R4
-w1437289548
+w1437376191
 8D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 FD:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 L0 3
@@ -63,7 +63,7 @@ r1
 R2
 R3
 n@data@mem
-!s100 o2HKnlfI0G8Yih_EQ=SkG0
+!s100 ?h]@>9z6<ac:CInonBD1T1
 !s85 0
 vdigitube_scan
 IG4@W:?G]UE?mh5iQ]ERoB2
@@ -175,7 +175,6 @@ n@i@d@e@xreg
 !s100 :`[^Dc@l=I<D@?G?ZGzg@3
 !s85 0
 vIFIDreg
-!s100 ljI2Un]zHol]gGY]4fAk70
 IN^<Pj[NXjo8?CD9gSHFTD2
 V^L^g:6Rkbc0KAQfb3gb<`2
 R4
@@ -185,11 +184,12 @@ FD:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 L0 3
 R1
 r1
-!s85 0
 31
 R2
 R3
 n@i@f@i@dreg
+!s100 ljI2Un]zHol]gGY]4fAk70
+!s85 0
 vMemtoRegMUX
 IkN8fQ5k@X<3X2gdOB>TeF1
 VBWA]39U1zmN==4XTzW`iA3
@@ -239,21 +239,21 @@ n@peripheral
 !s100 LzJMT_6X6nlD==?VD8beN1
 !s85 0
 vpipelineCPU
-I=IiAmC7jG_^L=YiK3[eIM0
+!s100 Y[Q1NkHFBQbEb91QN>m=03
+I^RFVfV89:g=zBgAO<5`=O1
 Vi=[K:=Un2hW2=0d=31gRM3
 R4
-w1437374575
+w1437376435
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3
 R1
 r1
+!s85 0
 31
 R2
 R3
 npipeline@c@p@u
-!s100 Y^68:;I;m4]=:BMj8@AV[2
-!s85 0
 vprogramcounter
 IMO]U?bZB]RUj?l;3mLjBP2
 VKMQCj2=eLJndl`3E6oKoz1
