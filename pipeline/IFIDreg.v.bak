@@ -12,7 +12,7 @@ output [31:0] instructionout;
 output [31:0] PCplusout;
 output IRQout;
 
-reg [31:0] instruction = 32'h0;
+reg [31:0] instruction;
 reg [31:0] PCplus;
 reg IRQ;
 
