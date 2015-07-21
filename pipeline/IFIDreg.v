@@ -32,7 +32,7 @@ begin
   begin
     instruction <= 32'h0;
     PCplus <= PCplusin;
-    IRQ <= 1'b0;
+    IRQ <= IRQin;
   end
 end
 

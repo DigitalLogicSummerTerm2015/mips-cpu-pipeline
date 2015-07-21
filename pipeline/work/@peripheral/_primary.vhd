@@ -12,6 +12,8 @@ entity Peripheral is
         led             : out    vl_logic_vector(7 downto 0);
         switch          : in     vl_logic_vector(7 downto 0);
         digi            : out    vl_logic_vector(11 downto 0);
-        irqout          : out    vl_logic
+        irqout          : out    vl_logic;
+        din             : in     vl_logic;
+        dout            : out    vl_logic
     );
 end Peripheral;

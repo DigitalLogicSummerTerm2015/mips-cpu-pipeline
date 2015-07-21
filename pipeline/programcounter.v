@@ -35,7 +35,7 @@ begin
   end
 end
 
-assign PC = {1'b0,currentPC[30:0]};
+assign PC = currentPC;
 assign PCplusout = {PC[31],PC[30:0] + 31'h00000004};
  
 endmodule

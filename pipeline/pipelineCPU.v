@@ -1,12 +1,14 @@
 `timescale 1ns/1ps
 
-module pipelineCPU(clk,reset,switch,led,digi);
+module pipelineCPU(clk,reset,din,switch,led,digi,dout);
 
 input clk;
 input reset;
-input switch;
-output led;
-output digi;//input and output need modifying
+input din;
+input [7:0] switch;
+output [7:0] led;
+output [11:0] digi;
+output dout;
 
 wire datahazard;
 wire [2:0] PCSrc;
@@ -94,6 +96,8 @@ wire [31:0] DataBin;
 wire [31:0] ALUresult;
 wire [31:0] EXMEMDatawrite;
 wire [31:0] RAMrdata;
+wire [31:0] RAMrdata1;
+wire [31:0] RAMrdata2;
 wire [31:0] RAMrdataout;
 
 programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,DatabusA,PC,PCplusin);
@@ -102,7 +106,7 @@ ROM rom1(PC,instructionin);
 
 IFIDreg IFIDreg1(clk,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
-controlunit ctrl1(instructionout,IRQout,PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
+controlunit ctrl1(instructionout,IRQout,PC[31],PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
 RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
 
@@ -137,7 +141,11 @@ ALU ALU1(DataAin,DataBin,IDEXALUFun,IDEXSign,ALUresult);//refer to the book
 EXMEMreg EXMEMreg1(clk,IDEXRt,IDEXRd,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
 EXMEMRt,EXMEMRd,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr,EXMEMMemWr,EXMEMMemRd,EXMEMMemtoReg);
 
-DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata,led,switch,digi,IRQ);
+DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata1);
+
+Peripheral peripheral(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata2,led,switch,digi,IRQ,din,dout);
+
+assign RAMrdata = (EXMEMALUresult[31:28] == 4'b0100) ? RAMrdata2 : RAMrdata1;
 
 MEMWBreg MEMWBreg1(clk,EXMEMRt,EXMEMRd,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
 MEMWBRt,MEMWBRd,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);

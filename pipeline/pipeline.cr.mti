@@ -1,4 +1,11 @@
-D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v
+D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module Peripheral
+
+Top level modules:
+	Peripheral
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/ALUSrcMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module ALUSrcMUX
 
@@ -11,6 +18,13 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 
 Top level modules:
 	flushMUX
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/receiver.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/receiver.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module receiver
+
+Top level modules:
+	receiver
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/shifter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/shifter.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -27,19 +41,19 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	logicer
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module MEMWBreg
-
-Top level modules:
-	MEMWBreg
-
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module pipelineCPU
 
 Top level modules:
 	pipelineCPU
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MEMWBreg.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module MEMWBreg
+
+Top level modules:
+	MEMWBreg
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/DatabusMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/DatabusMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -48,19 +62,19 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	databusMUX
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/watchmaker.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/watchmaker.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module watchmaker
+
+Top level modules:
+	watchmaker
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/forwardMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module forwardMUX
 
 Top level modules:
 	forwardMUX
-
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module IDEXreg
-
-Top level modules:
-	IDEXreg
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/hazardcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -69,12 +83,40 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	hazardcheck
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/IDEXreg.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module IDEXreg
+
+Top level modules:
+	IDEXreg
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module digitube_scan
+
+Top level modules:
+	digitube_scan
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/signextend.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/signextend.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module signextend
+
+Top level modules:
+	signextend
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/DataMem.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module DataMem
 
 Top level modules:
 	DataMem
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/sender.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/sender.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module sender
+
+Top level modules:
+	sender
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/controlunit.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -83,12 +125,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	controlunit
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/digitube_scan.v
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/alu.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/alu.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module digitube_scan
+-- Compiling module ALU
 
 Top level modules:
-	digitube_scan
+	ALU
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/MemtoRegMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/MemtoRegMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -104,20 +146,6 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	IFIDreg
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/alu.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/alu.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module ALU
-
-Top level modules:
-	ALU
-
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module testpipelineCPU
-
-Top level modules:
-	testpipelineCPU
-
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/RegDstMUX.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/RegDstMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module RegDstMUX
@@ -132,12 +160,26 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	branchcheck
 
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/sampler.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/sampler.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module sampler
+
+Top level modules:
+	sampler
+
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/forwardunit.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/forwardunit.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module forwardunit
 
 Top level modules:
 	forwardunit
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/serial_transceiver.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/serial_transceiver.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module serial_transceiver
+
+Top level modules:
+	serial_transceiver
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/rom.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/rom.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -160,19 +202,19 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	alu_tb
 
-} {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module programcounter
-
-Top level modules:
-	programcounter
-
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/adder.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/adder.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module adder
 
 Top level modules:
 	adder
+
+} {} {}} D:/Document/mips-cpu-pipeline/pipeline/programcounter.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module programcounter
+
+Top level modules:
+	programcounter
 
 } {} {}} D:/Document/mips-cpu-pipeline/pipeline/comparer.v {1 {vlog -work work -novopt -nocovercells D:/Document/mips-cpu-pipeline/pipeline/comparer.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010

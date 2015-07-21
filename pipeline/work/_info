@@ -118,10 +118,10 @@ R5
 !s100 E9O^;8Y4=l?7;>Gdc<mY]1
 !s85 0
 vcontrolunit
-I?;On]LFiaf@W`29PRUc<l0
-VBMl2K6e^;]Sd`<oe]Fihz3
+IJoB?`Zoc^NCC`9[OIeHI<3
+VQ3<L?1zLSf@P7;Y`I;`Xc3
 R1
-w1437452579
+w1437496222
 8D:/Document/mips-cpu-pipeline/pipeline/controlunit.v
 FD:/Document/mips-cpu-pipeline/pipeline/controlunit.v
 L0 3
@@ -130,7 +130,7 @@ r1
 31
 R4
 R5
-!s100 cCSdALmDLoDOL@o8VDzN;3
+!s100 hlga30A;a6G8m46aPohnJ1
 !s85 0
 vdatabusMUX
 I5I<o[g9ffXaR>kAoIeZE=0
@@ -149,10 +149,10 @@ ndatabus@m@u@x
 !s100 N29o4zb1gf;ahjW<BG;;a1
 !s85 0
 vDataMem
-IG8Q?K>fzlbCZIl0LQGHTX3
-V68TR=LLM8C`<?Oo<V5hZ03
+IH8A97oR25TC6zcbYA8`]51
+V3NXn2IXJM`I26fSc6@b]33
 R1
-w1437474625
+w1437490874
 8D:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 FD:/Document/mips-cpu-pipeline/pipeline/DataMem.v
 L0 3
@@ -162,7 +162,7 @@ r1
 R4
 R5
 n@data@mem
-!s100 ?lSYaDlQG:>Im49G3ii9l3
+!s100 7ng7kJmICV0Ndd@`B9hdm3
 !s85 0
 vdigitube_scan
 IG4@W:?G]UE?mh5iQ]ERoB2
@@ -289,10 +289,10 @@ n@i@d@e@xreg
 !s100 U`gn5_ffNhUdT>lbUPB<30
 !s85 0
 vIFIDreg
-IN^<Pj[NXjo8?CD9gSHFTD2
+IjC<?O>AhT4ao^bULI:omF3
 V^L^g:6Rkbc0KAQfb3gb<`2
 R1
-w1437375767
+w1437495098
 8D:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 FD:/Document/mips-cpu-pipeline/pipeline/IFIDreg.v
 L0 3
@@ -302,7 +302,7 @@ r1
 R4
 R5
 n@i@f@i@dreg
-!s100 ljI2Un]zHol]gGY]4fAk70
+!s100 T>nz5EVHRDZ9SDER9k=0F0
 !s85 0
 vlogicer
 IDge64KT4eeQW3?on^MAI@2
@@ -352,10 +352,10 @@ n@m@e@m@w@breg
 !s100 =_4kNm:]kZAGPl3nFO;S<3
 !s85 0
 vPeripheral
-IzKo?1oTlhhbiX<O?S8=7f2
-V]3^CWJKc4;Nj;SZBg742@1
+I?JGK4Io9amUe8@?1CQF8K2
+Vo>ONBEcYFIYo[ZCQTOCz01
 R1
-w1340879364
+w1437499873
 8D:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
 FD:/Document/mips-cpu-pipeline/pipeline/Peripheral.v
 L0 3
@@ -365,13 +365,13 @@ r1
 R4
 R5
 n@peripheral
-!s100 LzJMT_6X6nlD==?VD8beN1
+!s100 ]Y`?0clSV_FUn:Q2o=Cni0
 !s85 0
 vpipelineCPU
-I[[@TiZm`DB>A_U:;OgVC81
-Vi=[K:=Un2hW2=0d=31gRM3
+IMo3Eb9YS[R3Q[d?@Z<2WL0
+Vn1XFcchejek3EUVozPk:<0
 R1
-w1437460923
+w1437503829
 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU.v
 L0 3
@@ -381,13 +381,13 @@ r1
 R4
 R5
 npipeline@c@p@u
-!s100 5LAWkD9_H:^_:89B<E7`T3
+!s100 o]_XHJ@A55@FEQ@]KSVSi1
 !s85 0
 vprogramcounter
-I1;oN4lY5[V`98K7zigK2Q3
+IW2j9?;fLdZanGhaID8LkO3
 VKMQCj2=eLJndl`3E6oKoz1
 R1
-w1437462147
+w1437497158
 8D:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 FD:/Document/mips-cpu-pipeline/pipeline/programcounter.v
 L0 3
@@ -396,7 +396,22 @@ r1
 31
 R4
 R5
-!s100 Vz61Pl79e22DZJaSohoMT1
+!s100 4mlzz3?TC6KdDkYFVdU1f1
+!s85 0
+vreceiver
+IKN7VedYiPE:Yie1k1QZ0S0
+VkMFAfECWJSJDPZ5]WH>^E1
+R1
+Z10 w1437490166
+8D:/Document/mips-cpu-pipeline/pipeline/receiver.v
+FD:/Document/mips-cpu-pipeline/pipeline/receiver.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!s100 <E:G42X]ACXhdCjFToLF13
 !s85 0
 vRegDstMUX
 ImlGMoZ@[ABo:XF9iJM1mJ2
@@ -431,10 +446,10 @@ n@reg@file
 !s100 :4B96daeHnRjGMMfcYzc21
 !s85 0
 vROM
-IO]kahnFdhYX3zczeL:cX@0
+Ie>=KP`:f_B@aB@RWb`cm33
 VfD3LVFSESNQQBVkbKMLn31
 R1
-w1437474811
+w1437498577
 8D:/Document/mips-cpu-pipeline/pipeline/rom.v
 FD:/Document/mips-cpu-pipeline/pipeline/rom.v
 L0 3
@@ -444,7 +459,52 @@ r1
 R4
 R5
 n@r@o@m
-!s100 2KoBOH5hicgliTm@3YTRo2
+!s100 d;PIEFe3:5eNcLXBJLg3K2
+!s85 0
+vsampler
+I[6YBL7kH?hE>GZ`1gedDN0
+VdZADm_BPoi@1Re?aNBkEA1
+R1
+R10
+8D:/Document/mips-cpu-pipeline/pipeline/sampler.v
+FD:/Document/mips-cpu-pipeline/pipeline/sampler.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!s100 k0]DNe72E:>87J4OJeXmE3
+!s85 0
+vsender
+I;PS4Nlo]S:4kV3oVcESlm0
+V6Sm^T?i2kO`JXjDK?mT;_2
+R1
+R10
+8D:/Document/mips-cpu-pipeline/pipeline/sender.v
+FD:/Document/mips-cpu-pipeline/pipeline/sender.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!s100 TBUn0F4mg<4>fk0iS;DnR1
+!s85 0
+vserial_transceiver
+IfPD23MGzKNd]D7UYFDU_=3
+VOzV9;aVGidT5XfOdYaZDn2
+R1
+R10
+8D:/Document/mips-cpu-pipeline/pipeline/serial_transceiver.v
+FD:/Document/mips-cpu-pipeline/pipeline/serial_transceiver.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!s100 Y6zF4EgQ`;j=1=[QOjjVj0
 !s85 0
 vshifter
 I]G8EKb590eJeX7kTOWh=T1
@@ -462,7 +522,6 @@ R5
 !s100 Fh_gzJIZ^A]jzfT`hb;h93
 !s85 0
 vsignextend
-!s100 FgL>QVlX<M_jBUUzbaVD<3
 IFOJM@5zX?K?cUD1YC<G6:2
 VnjQgNo`2SUlBYIBgD8gO32
 R1
@@ -472,17 +531,33 @@ FD:/Document/mips-cpu-pipeline/pipeline/signextend.v
 L0 3
 R3
 r1
+31
+R4
+R5
+!s100 FgL>QVlX<M_jBUUzbaVD<3
+!s85 0
+vtest_cpu
+!s100 Yh1D35BiTEg<<ofMacH>j0
+IZ7oAUobC]Hji_Xl?Wa7lg0
+VlTnbl^OCFK2X:Y3?FCg4z2
+R1
+w1437505630
+Z11 8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v
+Z12 FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v
+L0 2
+R3
+r1
 !s85 0
 31
 R4
 R5
 vtestpipelineCPU
-I88L?3IUoi?F5oc72Az01F3
+IA?Z7_ULK6lVjSFSdQk2cF0
 VBn^]ZBiB;:2PdT[j;lZaZ1
 R1
-w1437464845
-8D:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v
-FD:/Document/mips-cpu-pipeline/pipeline/pipelineCPU_tb.v
+w1437493425
+R11
+R12
 L0 3
 R3
 r1
@@ -490,5 +565,20 @@ r1
 R4
 R5
 ntestpipeline@c@p@u
-!s100 ASnX0a<X9J[=a4i:RURgk3
+!s100 VbcA5oA^_`@K1=Ea8?nc23
+!s85 0
+vwatchmaker
+IC6bD16:abY6Y=O5<H_BI>3
+VTg`7<KfX6U8YNOA`YDYTk2
+R1
+R10
+8D:/Document/mips-cpu-pipeline/pipeline/watchmaker.v
+FD:/Document/mips-cpu-pipeline/pipeline/watchmaker.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!s100 e8BOHjolEBXa5b=AOD^=h2
 !s85 0
