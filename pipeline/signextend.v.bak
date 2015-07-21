@@ -19,11 +19,9 @@ begin
     else extimm <= {16'h0,imm};
   end
   else extimm <= {16'h0,imm};
-
 end
 
 assign ConBA = PCplus + (extimm << 2);
-
 assign immout = (LUOp == 1'b1) ? {imm,16'h0} : extimm;
 
 endmodule

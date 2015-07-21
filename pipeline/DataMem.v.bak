@@ -22,6 +22,11 @@ reg [31:0] TH,TL;
 reg [2:0] TCON;
 assign irqout = TCON[2];
 
+initial
+begin
+  ;
+end
+
 always@(*) begin
 	if(rd) begin
 		case(addr)
@@ -38,7 +43,7 @@ always@(*) begin
 		rdata <= 32'b0;
 end
 
-always@(negedge reset or posedge clk) begin
+always@(negedge reset or negedge clk) begin
 	if(~reset) begin
 		TH <= 32'b0;
 		TL <= 32'b0;

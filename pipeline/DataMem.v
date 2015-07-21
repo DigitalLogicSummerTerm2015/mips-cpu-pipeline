@@ -22,6 +22,14 @@ reg [31:0] TH,TL;
 reg [2:0] TCON;
 assign irqout = TCON[2];
 
+integer i;
+
+initial
+begin
+  for(i = 0;i < RAM_SIZE;i = i + 1)
+    RAMDATA[i] <= 32'h0;
+end
+
 always@(*) begin
 	if(rd) begin
 		case(addr)

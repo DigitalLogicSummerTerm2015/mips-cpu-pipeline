@@ -28,7 +28,7 @@ initial
 begin
   #7 reset <= 0;
   #1 reset <= 1;
-  #400 $finish;
+  #2000 $finish;
 end
 
 endmodule

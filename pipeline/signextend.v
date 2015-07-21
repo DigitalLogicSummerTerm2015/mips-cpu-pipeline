@@ -15,7 +15,7 @@ always @(*)
 begin
   if(EXTOp)
   begin
-    if(imm[15]) extimm <= {16'h1111,imm};
+    if(imm[15]) extimm <= {16'hffff,imm};
     else extimm <= {16'h0,imm};
   end
   else extimm <= {16'h0,imm};
