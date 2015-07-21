@@ -3,7 +3,8 @@ use verilog.vl_types.all;
 entity EXMEMreg is
     port(
         clk             : in     vl_logic;
-        instructionin   : in     vl_logic_vector(31 downto 0);
+        Rtin            : in     vl_logic_vector(4 downto 0);
+        Rdin            : in     vl_logic_vector(4 downto 0);
         PCplusin        : in     vl_logic_vector(31 downto 0);
         ALUresultin     : in     vl_logic_vector(31 downto 0);
         DatabusBin      : in     vl_logic_vector(31 downto 0);
@@ -12,7 +13,8 @@ entity EXMEMreg is
         MemWrin         : in     vl_logic;
         MemRdin         : in     vl_logic;
         MemtoRegin      : in     vl_logic_vector(1 downto 0);
-        instructionout  : out    vl_logic_vector(31 downto 0);
+        Rtout           : out    vl_logic_vector(4 downto 0);
+        Rdout           : out    vl_logic_vector(4 downto 0);
         PCplusout       : out    vl_logic_vector(31 downto 0);
         ALUresultout    : out    vl_logic_vector(31 downto 0);
         DatabusBout     : out    vl_logic_vector(31 downto 0);

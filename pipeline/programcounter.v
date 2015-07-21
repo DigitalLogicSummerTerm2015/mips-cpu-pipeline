@@ -14,7 +14,6 @@ output [31:0] PC;
 output [31:0] PCplusout;
 
 reg [31:0] currentPC;
-wire [31:0] PCplusin = 32'h0;
 
 always @(posedge clk or negedge reset)
 begin
@@ -24,9 +23,9 @@ begin
     if(~datahazard)
     begin
       case(PCSrc[2:0])
-        3'b000: currentPC <= PCplusin;
-        3'b001: currentPC <= (ALUOut == 1'b0) ? PCplusin : {currentPC[31],ConBA[30:0]};
-        3'b010: currentPC <= {currentPC[31],5'h00,JT};
+        3'b000: currentPC <= PCplusout;
+        3'b001: currentPC <= (ALUOut == 1'b0) ? PCplusout : {currentPC[31],ConBA[30:0]};
+        3'b010: currentPC <= {currentPC[31],3'b000,JT,2'b00};
         3'b011: currentPC <= DatabusA;
         3'b100: currentPC <= 32'h80000004;
         default: currentPC <= 32'h80000008;
@@ -38,6 +37,5 @@ end
 
 assign PC = {1'b0,currentPC[30:0]};
 assign PCplusout = {PC[31],PC[30:0] + 31'h00000004};
-assign PCplusin = PCplusout;
  
 endmodule

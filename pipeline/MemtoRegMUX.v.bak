@@ -8,6 +8,8 @@ input [31:0] rdata;
 input [31:0] PCplus;
 output writedata;
 
-assign writedata = (MemtoReg == 2'b00) ? 
+assign writedata = (MemtoReg == 2'b00) ? ALUresult :
+                   (MemtoReg == 2'b01) ? rdata :
+                   PCplus;
 
 endmodule

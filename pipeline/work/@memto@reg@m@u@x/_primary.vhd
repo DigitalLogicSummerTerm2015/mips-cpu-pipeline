@@ -6,6 +6,6 @@ entity MemtoRegMUX is
         ALUresult       : in     vl_logic_vector(31 downto 0);
         rdata           : in     vl_logic_vector(31 downto 0);
         PCplus          : in     vl_logic_vector(31 downto 0);
-        writedata       : out    vl_logic
+        writedata       : out    vl_logic_vector(31 downto 0)
     );
 end MemtoRegMUX;

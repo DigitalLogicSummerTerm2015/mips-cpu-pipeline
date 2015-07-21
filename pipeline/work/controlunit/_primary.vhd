@@ -3,7 +3,7 @@ use verilog.vl_types.all;
 entity controlunit is
     port(
         instruction     : in     vl_logic_vector(31 downto 0);
-        IRQ             : in     vl_logic_vector(31 downto 0);
+        IRQ             : in     vl_logic;
         PCplusin        : in     vl_logic_vector(31 downto 0);
         PCplusout       : out    vl_logic_vector(31 downto 0);
         PCSrc           : out    vl_logic_vector(2 downto 0);

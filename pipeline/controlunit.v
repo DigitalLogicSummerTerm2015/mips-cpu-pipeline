@@ -3,7 +3,7 @@
 module controlunit(instruction,IRQ,PCplusin,PCplusout,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
 input [31:0] instruction;
-input [31:0] IRQ;
+input IRQ;
 input [31:0] PCplusin;
 output [31:0] PCplusout;
 output [2:0] PCSrc;

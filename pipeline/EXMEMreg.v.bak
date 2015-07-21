@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 
-module EXMEMreg(clk,instructionin,PCplusin,ALUresultin,DatabusBin,RegDstin,RegWrin,MemWrin,MemRdin,MemtoRegin,
-instructionout,PCplusout,ALUresultout,DatabusBout,RegDstout,RegWrout,MemWrout,MemRdout,MemtoRegout);
+module EXMEMreg(clk,Rtin,Rdin,PCplusin,ALUresultin,DatabusBin,RegDstin,RegWrin,MemWrin,MemRdin,MemtoRegin,
+Rtout,Rdout,PCplusout,ALUresultout,DatabusBout,RegDstout,RegWrout,MemWrout,MemRdout,MemtoRegout);
 
 input clk;
-input [31:0] instructionin;
+input [4:0] Rtin;
+input [4:0] Rdin;
 input [31:0] PCplusin;
 input [31:0] ALUresultin;
 input [31:0] DatabusBin;
@@ -13,8 +14,10 @@ input RegWrin;
 input MemWrin;
 input MemRdin;
 input [1:0] MemtoRegin;
-output [31:0] instructionout;
-reg [31:0] instructionout;
+output [4:0] Rtout;
+reg [4:0] Rtout;
+output [4:0] Rdout;
+reg [4:0] Rdout;
 output [31:0] PCplusout;
 reg [31:0] PCplusout;
 output [31:0] ALUresultout;
@@ -34,7 +37,8 @@ reg [1:0] MemtoRegout;
 
 always @(posedge clk)
 begin
-  instructionout <= instructionin;
+  Rtout <= instructionin[20:16];
+  Rdout <= instructionin[15:11];
   PCplusout <= PCplusin;
   ALUresultout <= ALUresultin;
   DatabusBout <= DatabusBin;
@@ -42,6 +46,7 @@ begin
   RegWrout <= RegWrin;
   MemWrout <= MemWrin;
   MemRdout <= MemRdin;
+  MemtoRegout <= MemtoRegin;
 end
 
 endmodule

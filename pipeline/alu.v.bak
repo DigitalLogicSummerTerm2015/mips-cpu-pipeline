@@ -3,7 +3,7 @@ module alu(
     input [31:0] B,
     input [5:0] ALUFun,
     input Sign,
-    output reg [31:0] Z,
+    output reg [31:0] Z
 );
 
 wire zero, overflow, negative;

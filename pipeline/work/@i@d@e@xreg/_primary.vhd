@@ -26,7 +26,10 @@ entity IDEXreg is
         MemWrout        : out    vl_logic;
         MemRdout        : out    vl_logic;
         MemtoRegout     : out    vl_logic_vector(1 downto 0);
-        instructionout  : out    vl_logic_vector(31 downto 0);
+        shamt           : out    vl_logic_vector(4 downto 0);
+        Rsout           : out    vl_logic_vector(4 downto 0);
+        Rtout           : out    vl_logic_vector(4 downto 0);
+        Rdout           : out    vl_logic_vector(4 downto 0);
         DatabusAout     : out    vl_logic_vector(31 downto 0);
         DatabusBout     : out    vl_logic_vector(31 downto 0);
         immout          : out    vl_logic_vector(31 downto 0);

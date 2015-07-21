@@ -3,7 +3,7 @@
 module IDEXreg(clk,instructionin,DatabusAin,DatabusBin,immin,PCplusin,
 RegDstin,RegWrin,ALUSrc1in,ALUSrc2in,ALUFunin,Signin,MemWrin,MemRdin,MemtoRegin,
 RegDstout,RegWrout,ALUSrc1out,ALUSrc2out,ALUFunout,Signout,MemWrout,MemRdout,MemtoRegout,
-instructionout,DatabusAout,DatabusBout,immout,PCplusout);
+shamt,Rsout,Rtout,Rdout,DatabusAout,DatabusBout,immout,PCplusout);
 
 input clk;
 input [31:0] instructionin;
@@ -38,8 +38,14 @@ output MemRdout;
 reg MemRdout;
 output [1:0] MemtoRegout;
 reg [1:0] MemtoRegout;
-output [31:0] instructionout;
-reg [31:0] instructionout;
+output [4:0] shamt;
+reg [4:0] shamt;
+output [4:0] Rsout;
+reg [4:0] Rsout;
+output [4:0] Rtout;
+reg [4:0] Rtout;
+output [4:0] Rdout;
+reg [4:0] Rdout;
 output [31:0] DatabusAout;
 reg [31:0] DatabusAout;
 output [31:0] DatabusBout;
@@ -60,7 +66,13 @@ begin
   MemWrout <= MemWrin;
   MemRdout <= MemRdin;
   MemtoRegout <= MemtoRegin;
-  instructionout <= instructionin;
+  shamt <= instructionin[10:6];
+  Rsout <= instructionin[25:21];
+  Rtout <= instructionin[20:16];
+  if(RegDstin == 2'b00) Rdout <= instructionin[15:11];
+  else if(RegDstin == 2'b01) Rdout <= instructionin[20:16];
+  else if(RegDstin == 2'b10) Rdout <= 5'h1f;
+  else Rdout <= 5'h1a;
   DatabusAout <= DatabusAin;
   DatabusBout <= DatabusBin;
   immout <= immin;
