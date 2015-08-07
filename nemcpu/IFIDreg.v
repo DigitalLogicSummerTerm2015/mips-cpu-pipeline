@@ -1,8 +1,9 @@
 `timescale 1ns/1ps
 
-module IFIDreg(clk,PCSrc,IRQin,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
+module IFIDreg(clk,branch,PCSrc,IRQin,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
 input clk;
+input branch;
 input datahazard;
 input [2:0] PCSrc;
 input IRQin;
@@ -29,7 +30,18 @@ begin
     else;
   end
   else
-  begin    instruction <= 32'h0;      IRQ <=  IRQin;
+  begin
+    if(PCSrc == 3'b001 && branch == 1'b0)
+    begin
+      instruction <= instructionin; 
+      PCplus <= PCplusin;
+      IRQ <= IRQin;
+    end
+    else
+    begin
+      instruction <= 32'h0;  
+      IRQ <=  IRQin;
+    end
   end
 end
 

@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity IFIDreg is
     port(
         clk             : in     vl_logic;
+        branch          : in     vl_logic;
         PCSrc           : in     vl_logic_vector(2 downto 0);
         IRQin           : in     vl_logic;
         datahazard      : in     vl_logic;

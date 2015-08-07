@@ -11,9 +11,9 @@ output [11:0] digi;
 output dout;
 
 wire reset = ~button;
-//wire slow_clk;
+wire slow_clk;
 
-//watchmaker slow_watch(slow_clk,clk);
+watchmaker #(4) slow_watch(slow_clk,clk);
 
 wire datahazard;
 wire [2:0] PCSrc;
@@ -105,15 +105,15 @@ wire [31:0] RAMrdata1;
 wire [31:0] RAMrdata2;
 wire [31:0] RAMrdataout;
 
-programcounter PC1(clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,daout,PC,PCplusin);
+programcounter PC1(slow_clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,daout,PC,PCplusin);
 
 ROM rom1(PC,instructionin);
 
-IFIDreg IFIDreg1(clk,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
+IFIDreg IFIDreg1(slow_clk,ALUOut,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
 controlunit ctrl1(instructionout,IRQout,PC[31],PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 
-RegFile regfile1(reset,clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
+RegFile regfile1(reset,slow_clk,instructionout[25:21],DatabusA,instructionout[20:16],DatabusB,MEMWBRegWr,WriteReg,WriteData);
 
 branchcheck bc1(OpCode,daout,dbout,ALUOut);
 
@@ -123,7 +123,7 @@ hazardcheck hc1(instructionout[25:21],instructionout[20:16],IDEXRt,EXMEMRt,IDEXM
 
 flushMUX fMUX1(flushIDEX,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn);
 
-IDEXreg IDEXreg1(clk,instructionout,datahazard,daout,dbout,immout,PCplusout1,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
+IDEXreg IDEXreg1(slow_clk,instructionout,datahazard,daout,dbout,immout,PCplusout1,RegDstn,RegWrn,ALUSrc1n,ALUSrc2n,ALUFunn,Signn,MemWrn,MemRdn,MemtoRegn,
 IDEXRegDst,IDEXRegWr,IDEXALUSrc1,IDEXALUSrc2,IDEXALUFun,IDEXSign,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,IDEXshamt,IDEXRs,IDEXRt,IDEXRd,DatabusAout,DatabusBout,imm,IDEXPCplus);
 
 forwardunit fu1(instructionout[25:21],instructionout[20:16],IDEXRs,IDEXRt,IDEXRd,EXMEMRd,MEMWBRd,
@@ -143,16 +143,16 @@ ALUSrcMUX ALB(IDEXALUSrc2,DataB,imm,DataBin);
 
 ALU ALU1(DataAin,DataBin,IDEXALUFun,IDEXSign,ALUresult);//refer to the book
 
-EXMEMreg EXMEMreg1(clk,IDEXRt,IDEXRd,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
+EXMEMreg EXMEMreg1(slow_clk,IDEXRt,IDEXRd,IDEXPCplus,ALUresult,DataB,IDEXRegDst,IDEXRegWr,IDEXMemWr,IDEXMemRd,IDEXMemtoReg,
 EXMEMRt,EXMEMRd,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr,EXMEMMemWr,EXMEMMemRd,EXMEMMemtoReg);
 
-DataMem RAM1(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata1);
+DataMem RAM1(reset,slow_clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata1);
 
-Peripheral peripheral(reset,clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata2,led,switch,digi,IRQ,din,dout);
+Peripheral peripheral(reset,slow_clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata2,led,switch,digi,IRQ,din,dout);
 
 assign RAMrdata = (EXMEMALUresult[31:28] == 4'b0100) ? RAMrdata2 : RAMrdata1;
 
-MEMWBreg MEMWBreg1(clk,EXMEMRt,EXMEMRd,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
+MEMWBreg MEMWBreg1(slow_clk,EXMEMRt,EXMEMRd,EXMEMPCplus,RAMrdata,EXMEMALUresult,EXMEMRegDst,EXMEMRegWr,EXMEMMemtoReg,
 MEMWBRt,MEMWBRd,MEMWBPCplus,RAMrdataout,MEMWBALUresult,MEMWBRegDst,MEMWBRegWr,MEMWBMemtoReg);
 
 MemtoRegMUX MtR(MEMWBMemtoReg,MEMWBALUresult,RAMrdataout,MEMWBPCplus,WriteData);

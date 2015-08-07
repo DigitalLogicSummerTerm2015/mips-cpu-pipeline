@@ -76,13 +76,6 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	pipelineCPU
 
-} {} {}} D:/nemcpu/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/MEMWBreg.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module MEMWBreg
-
-Top level modules:
-	MEMWBreg
-
 } {} {}} D:/nemcpu/DatabusMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/DatabusMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 -- Compiling module databusMUX
@@ -90,12 +83,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	databusMUX
 
-} {} {}} D:/nemcpu/watchmaker.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/watchmaker.v
+} {} {}} D:/nemcpu/MEMWBreg.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/MEMWBreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module watchmaker
+-- Compiling module MEMWBreg
 
 Top level modules:
-	watchmaker
+	MEMWBreg
 
 } {} {}} D:/nemcpu/forwardMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/forwardMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -104,12 +97,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	forwardMUX
 
-} {} {}} D:/nemcpu/hazardcheck.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/hazardcheck.v
+} {} {}} D:/nemcpu/watchmaker.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/watchmaker.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module hazardcheck
+-- Compiling module watchmaker
 
 Top level modules:
-	hazardcheck
+	watchmaker
 
 } {} {}} D:/nemcpu/IDEXreg.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/IDEXreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -118,26 +111,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	IDEXreg
 
-} {} {}} D:/nemcpu/signextend.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/signextend.v
+} {} {}} D:/nemcpu/hazardcheck.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/hazardcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module signextend
+-- Compiling module hazardcheck
 
 Top level modules:
-	signextend
-
-} {} {}} D:/nemcpu/sender.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/sender.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module sender
-
-Top level modules:
-	sender
-
-} {} {}} D:/nemcpu/controlunit.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/controlunit.v
-Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module controlunit
-
-Top level modules:
-	controlunit
+	hazardcheck
 
 } {} {}} D:/nemcpu/DataMem.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/DataMem.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -146,12 +125,26 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	DataMem
 
-} {} {}} D:/nemcpu/MemtoRegMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/MemtoRegMUX.v
+} {} {}} D:/nemcpu/controlunit.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/controlunit.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module MemtoRegMUX
+-- Compiling module controlunit
 
 Top level modules:
-	MemtoRegMUX
+	controlunit
+
+} {} {}} D:/nemcpu/sender.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/sender.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module sender
+
+Top level modules:
+	sender
+
+} {} {}} D:/nemcpu/signextend.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/signextend.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module signextend
+
+Top level modules:
+	signextend
 
 } {} {}} D:/nemcpu/IFIDreg.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/IFIDreg.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -167,12 +160,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	ALU
 
-} {} {}} D:/nemcpu/RegDstMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/RegDstMUX.v
+} {} {}} D:/nemcpu/MemtoRegMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/MemtoRegMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module RegDstMUX
+-- Compiling module MemtoRegMUX
 
 Top level modules:
-	RegDstMUX
+	MemtoRegMUX
 
 } {} {}} D:/nemcpu/pipelineCPU_tb.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/pipelineCPU_tb.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -181,12 +174,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	cpu_test
 
-} {} {}} D:/nemcpu/sampler.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/sampler.v
+} {} {}} D:/nemcpu/RegDstMUX.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/RegDstMUX.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module sampler
+-- Compiling module RegDstMUX
 
 Top level modules:
-	sampler
+	RegDstMUX
 
 } {} {}} D:/nemcpu/Branchcheck.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/Branchcheck.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -195,12 +188,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	branchcheck
 
-} {} {}} D:/nemcpu/serial_transceiver.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/serial_transceiver.v
+} {} {}} D:/nemcpu/sampler.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/sampler.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module serial_transceiver
+-- Compiling module sampler
 
 Top level modules:
-	serial_transceiver
+	sampler
 
 } {} {}} D:/nemcpu/forwardunit.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/forwardunit.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -209,12 +202,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 Top level modules:
 	forwardunit
 
-} {} {}} D:/nemcpu/rom.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/rom.v
+} {} {}} D:/nemcpu/serial_transceiver.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/serial_transceiver.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
--- Compiling module ROM
+-- Compiling module serial_transceiver
 
 Top level modules:
-	ROM
+	serial_transceiver
 
 } {} {}} D:/nemcpu/regfile.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/regfile.v
 Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
@@ -222,5 +215,12 @@ Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
 
 Top level modules:
 	RegFile
+
+} {} {}} D:/nemcpu/rom.v {1 {vlog -work work -novopt -nocovercells D:/nemcpu/rom.v
+Model Technology ModelSim SE vlog 6.5f Compiler 2010.06 Jun 16 2010
+-- Compiling module ROM
+
+Top level modules:
+	ROM
 
 } {} {}}

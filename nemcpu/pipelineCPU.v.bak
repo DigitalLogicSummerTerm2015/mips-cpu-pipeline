@@ -11,9 +11,9 @@ output [11:0] digi;
 output dout;
 
 wire reset = ~button;
-//wire slow_clk;
+wire slow_clk;
 
-//watchmaker slow_watch(slow_clk,clk);
+watchmaker #(4) slow_watch(slow_clk,clk);
 
 wire datahazard;
 wire [2:0] PCSrc;
@@ -109,7 +109,7 @@ programcounter PC1(slow_clk,reset,datahazard,PCSrc,ALUOut,ConBA,JT,daout,PC,PCpl
 
 ROM rom1(PC,instructionin);
 
-IFIDreg IFIDreg1(slow_clk,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
+IFIDreg IFIDreg1(slow_clk,ALUOut,PCSrc,IRQ,datahazard,instructionin,PCplusin,instructionout,PCplusout,IRQout);
 
 controlunit ctrl1(instructionout,IRQout,PC[31],PCplusout,PCplusout1,PCSrc,RegDst,RegWr,ALUSrc1,ALUSrc2,ALUFun,Sign,MemWr,MemRd,MemtoReg,EXTOp,LUOp,JT,OpCode);
 

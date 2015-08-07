@@ -53,7 +53,7 @@ always@(negedge reset or posedge clk) begin
 		TCON <= 3'b0;
 		result <= 8'b0;
 		tx_en <= 0;	
-		digi <= 12'h0;
+		digi <= 12'b1000_1011_1111;
 		led <= 8'h0;
 	end
 	else begin
