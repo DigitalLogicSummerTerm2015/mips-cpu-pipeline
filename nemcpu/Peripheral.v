@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
-module Peripheral (reset,clk,rd,wr,addr,wdata,rdata,led,switch,digi,irqout,din,dout);
-input reset,clk;
+module Peripheral (reset,pclk,clk,rd,wr,addr,wdata,rdata,led,switch,digi,irqout,din,dout);
+input reset,pclk,clk;
 input rd,wr;
 input [31:0] addr;
 input [31:0] wdata;
@@ -88,7 +88,7 @@ serial_transceiver uart(
 		.din(din), 
 		.result(result), 
 		.tx_en(tx_en), 
-		.clk(clk), 
+		.clk(pclk), 
 		.reset_n(reset)
 );
 

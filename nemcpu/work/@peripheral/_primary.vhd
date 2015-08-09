@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity Peripheral is
     port(
         reset           : in     vl_logic;
+        pclk            : in     vl_logic;
         clk             : in     vl_logic;
         rd              : in     vl_logic;
         wr              : in     vl_logic;

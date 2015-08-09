@@ -5,7 +5,7 @@ module watchmaker(new_clk, clk);
 output reg new_clk = 0;
 input clk;
 
-parameter RATIO = 100_000_000,  // V10 = 10MHz
+parameter RATIO = 100_000_000,  // V10 = 100MHz
           HALF_RATIO = RATIO / 2;
 
 integer counter = 1;

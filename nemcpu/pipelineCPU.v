@@ -148,7 +148,7 @@ EXMEMRt,EXMEMRd,EXMEMPCplus,EXMEMALUresult,EXMEMDatawrite,EXMEMRegDst,EXMEMRegWr
 
 DataMem RAM1(reset,slow_clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata1);
 
-Peripheral peripheral(reset,slow_clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata2,led,switch,digi,IRQ,din,dout);
+Peripheral peripheral(reset,clk,slow_clk,EXMEMMemRd,EXMEMMemWr,EXMEMALUresult,EXMEMDatawrite,RAMrdata2,led,switch,digi,IRQ,din,dout);
 
 assign RAMrdata = (EXMEMALUresult[31:28] == 4'b0100) ? RAMrdata2 : RAMrdata1;
 
